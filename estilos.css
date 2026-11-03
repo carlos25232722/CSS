@@ -1,0 +1,28 @@
+
+body {
+    font-family: sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #faf8f5; /* Tono cálido beige acorde al diseño */
+}
+
+/* Enlaces del Encabezado (Navegación Principal) */
+header nav ul li a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Enlaces de la Barra Lateral (Menú Secundario de Filtros) */
+aside ul li a {
+    color: #047857;
+    text-decoration: none;
+}
+
+/* Enlaces del Pie de Página (Redes Sociales) */
+footer ul li a {
+    color: #b91c1c;
+    text-decoration: none;
+}
