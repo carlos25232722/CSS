@@ -28,9 +28,14 @@ footer ul li a {
 }
 
 .btn-comprar {
-    color: blue;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
 }
 
-#btn-destacado {
-    color: red;
+.btn-comprar.destacado {
+    background-color: #dc2626; 
 }
