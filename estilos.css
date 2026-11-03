@@ -26,3 +26,11 @@ footer ul li a {
     color: #b91c1c;
     text-decoration: none;
 }
+
+.btn-comprar {
+    color: blue;
+}
+
+#btn-destacado {
+    color: red;
+}
