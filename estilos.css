@@ -38,3 +38,45 @@ footer ul li a {
 .btn-comprar.destacado {
     color: #dc2626; /* Un tono rojo/destacado pero solo en texto */
 }
+
+/* 1. Neutralizar las matemáticas del navegador para todas las cajas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0,3;
+}
+
+/* 2. Pintar las "supercajas" principales para visualizar su comportamiento */
+header {
+    background-color: #e0f2fe; /* Azul clarito */
+    padding: 20px;
+    background-image: url('imagenes/Sofa.jpg');
+    background-size:cover;
+    background-position: center;
+}
+
+main {
+    background-color: #f1f5f9; /* Gris muy suave */
+    padding: 20px;
+}
+
+aside {
+    background-color: #fef3c7; /* Amarillo/crema clarito */
+    padding: 20px;
+}
+
+footer {
+    background-color: #fee2e2; /* Rojo/rosado clarito */
+    padding: 20px;
+}
+
+article {
+    display: inline-block;
+    width: 45%;         
+    vertical-align: top;       
+    background-color: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px;        
+    padding: 20px;            
+    margin: 10px;             
+}

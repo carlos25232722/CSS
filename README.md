@@ -31,3 +31,15 @@ El proyecto se estructuró y respaldó local y remotamente siguiendo buenas prá
    * `feat(html): maquetar catalogo semantico con header, main, aside y footer`
    * `feat(styles): aplicar herencia global en body y selectores combinados por zonas`
    * `feat(styles): maquetar catalogo semantico y aplicar jerarquia CSS`
+
+## Hallazgos: El Modelo de Caja (Box Model)
+
+1. **Diferencia práctica entre Margin y Padding:**
+   - **Padding (Relleno interno):** Es el espacio que existe entre el contenido de la caja (texto, imágenes) y su borde. El color o fondo de la caja se extiende abarcando esta zona.
+   - **Margin (Margen externo):** Es el espacio invisible que separa una caja de los demás elementos vecinos (elementos hermanos), funcionando como un "campo de fuerza" para evitar choques visuales.
+
+2. **¿Por qué es obligatorio usar `box-sizing: border-box`?:**
+   - Por defecto, los navegadores calculan el tamaño sumando el contenido más el padding y los bordes, lo que desborda las medidas previstas. Al implementar `box-sizing: border-box`, logramos que cualquier relleno o borde crezca *hacia adentro*, garantizando que la caja mantenga exactamente el ancho y alto programados sin romper la estructura.
+
+3. **Efecto en los elementos hermanos al aplicar un margen grande:**
+   - Cuando se incrementa considerablemente el `margin` de un elemento, este ejerce mayor presión o separación sobre sus elementos contiguos, obligándolos a alejarse o, si el espacio horizontal del contenedor padre se agota, provocando que bajen de línea automáticamente.
