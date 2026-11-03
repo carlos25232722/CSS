@@ -27,15 +27,14 @@ footer ul li a {
     text-decoration: none;
 }
 
+/* Estilo plano para el enlace de compra sin fondo azul */
 .btn-comprar {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #2563eb;
-    color: #ffffff;
-    border-radius: 4px;
-    text-decoration: none;
+    color: #1d4ed8; /* Puedes cambiar este color si lo deseas */
+    text-decoration: underline;
+    font-weight: bold;
 }
 
+/* Si tenías una clase de destacado, también la ajustamos para que no tenga fondo */
 .btn-comprar.destacado {
-    background-color: #dc2626; 
+    color: #dc2626; /* Un tono rojo/destacado pero solo en texto */
 }
