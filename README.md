@@ -56,3 +56,15 @@ El proyecto se estructuró y respaldó local y remotamente siguiendo buenas prá
 
 3. **Prevención de colisiones visuales:**
    La centralización en `:root` evita la duplicación de código (deuda técnica) y asegura que, a medida que la hoja de estilos crezca con nuevos elementos, todos hereden las mismas reglas de diseño base. Esto elimina el riesgo de desajustes visuales o valores arbitrarios dispersos por todo el código CSS.
+
+## Hallazgos: Pseudoclases y Pseudoelementos
+
+1. **Diferencia funcional entre Pseudoclase y Pseudoelemento:**
+   - **Pseudoclases (`:hover`, `:active`, `:focus`):** Se encargan de reaccionar a estados dinámicos o eventos de interacción desencadenados por el usuario sobre la interfaz (como pasar el cursor, hacer clic o navegar con el teclado).
+   - **Pseudoelementos (`::before`, `::after`):** Permiten la inyección de contenido virtual o decorativo dentro del DOM (por ejemplo, indicadores visuales o insignias) sin modificar la estructura del archivo HTML.
+
+2. **Importancia técnica de `:focus` para la Accesibilidad Web (UX/UI):**
+   - La pseudoclase `:focus` garantiza una navegación clara y accesible para usuarios que interactúan mediante la tecla `Tab` o tecnologías de asistencia. Al aplicar un contorno visible (`outline`), el navegador proporciona una pista visual inconfundible sobre el elemento activo en pantalla.
+
+3. **Inyección decorativa desde CSS vs. HTML:**
+   - Inyectar detalles visuales con `::before` o `::after` desde la hoja de estilos evita la acumulación de etiquetas HTML vacías o innecesarias. Esto mantiene el código semántico, limpio, mantenible y enfocado únicamente en la estructura del contenido.

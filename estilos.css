@@ -31,38 +31,81 @@ body {
     background-color: var(--color-fondo);
 }
 
-/* Enlaces del Encabezado (Navegación Principal) */
+/* Enlaces del Encabezado (Navegación Principal) con :hover */
 header nav ul li a {
     color: var(--color-primario);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Enlaces de la Barra Lateral (Menú Secundario de Filtros) */
+header nav ul li a:hover {
+    color: var(--color-terciario);
+}
+
+/* Barra Lateral (Menú Secundario de Filtros) */
+aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 aside ul li a {
     color: var(--color-secundario);
     text-decoration: none;
+    display: inline-block;
+    padding: 2px 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+aside ul li a::before {
+    content: "• ";
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+}
+
+aside ul li a:focus {
+    outline: 2px solid var(--color-secundario);
+    outline-offset: 2px;
 }
 
 /* Enlaces del Pie de Página (Redes Sociales) */
 footer ul li a {
     color: var(--color-terciario);
     text-decoration: none;
+    transition: opacity 0.2s ease;
 }
 
-/* Estilo plano para el enlace de compra sin fondo azul */
-.btn-comprar {
-    color: var(--color-primario);
-    text-decoration: underline;
+footer ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Botones de compra automáticos para todos los enlaces dentro de los productos */
+article a {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
+    margin-top: var(--espaciado-pequeno);
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Si tenías una clase de destacado, también la ajustamos para que no tenga fondo */
-.btn-comprar.destacado {
-    color: var(--color-terciario); /* Un tono rojo/destacado pero solo en texto */
+article a:hover {
+    background-color: #1e40af;
 }
 
-/* 1. Neutralizar las matemáticas del navegador para todas las cajas (Corregido a *) */
+article a:active {
+    transform: translateY(1px);
+}
+
+/* 1. Neutralizar las matemáticas del navegador para todas las cajas */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -93,7 +136,9 @@ footer {
     padding: var(--espaciado-medio);
 }
 
+/* Tarjetas de productos con espacio preparado */
 article {
+    position: relative;
     display: inline-block;
     width: 45%;         
     vertical-align: top;       
@@ -102,4 +147,13 @@ article {
     border-radius: 8px;         
     padding: var(--espaciado-medio);            
     margin: var(--espaciado-pequeno);            
+}
+
+/* Estilos y proporción para las imágenes dentro de cada producto */
+article img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: var(--espaciado-pequeno);
 }
