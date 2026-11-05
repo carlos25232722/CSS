@@ -1,82 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    /* Variables de Color */
+    --color-primario: #1d4ed8;
+    --color-secundario: #047857;
+    --color-terciario: #b91c1c;
+    --color-texto: #333333;
+    --color-fondo: #faf8f5;
+    --color-header-bg: #e0f2fe;
+    --color-main-bg: #f1f5f9;
+    --color-aside-bg: #fef3c7;
+    --color-footer-bg: #fee2e2;
+    --color-blanco: #ffffff;
+    --color-borde: #e2e8f0;
+
+    /* Variables de Tipografía */
+    --fuente-principal: 'Inter', sans-serif;
+
+    /* Variables de Espaciado (Tokens de Escala) */
+    --espaciado-pequeno: 10px;
+    --espaciado-medio: 40px;
+}
 
 body {
-    font-family: sans-serif;
-    color: #333333;
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
-    background-color: #faf8f5; /* Tono cálido beige acorde al diseño */
+    padding: var(--espaciado-medio);
+    background-color: var(--color-fondo);
 }
 
 /* Enlaces del Encabezado (Navegación Principal) */
 header nav ul li a {
-    color: #1d4ed8;
+    color: var(--color-primario);
     text-decoration: none;
     font-weight: bold;
 }
 
 /* Enlaces de la Barra Lateral (Menú Secundario de Filtros) */
 aside ul li a {
-    color: #047857;
+    color: var(--color-secundario);
     text-decoration: none;
 }
 
 /* Enlaces del Pie de Página (Redes Sociales) */
 footer ul li a {
-    color: #b91c1c;
+    color: var(--color-terciario);
     text-decoration: none;
 }
 
 /* Estilo plano para el enlace de compra sin fondo azul */
 .btn-comprar {
-    color: #1d4ed8; /* Puedes cambiar este color si lo deseas */
+    color: var(--color-primario);
     text-decoration: underline;
     font-weight: bold;
 }
 
 /* Si tenías una clase de destacado, también la ajustamos para que no tenga fondo */
 .btn-comprar.destacado {
-    color: #dc2626; /* Un tono rojo/destacado pero solo en texto */
+    color: var(--color-terciario); /* Un tono rojo/destacado pero solo en texto */
 }
 
-/* 1. Neutralizar las matemáticas del navegador para todas las cajas */
+/* 1. Neutralizar las matemáticas del navegador para todas las cajas (Corregido a *) */
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0,3;
+    padding: 0;
 }
 
 /* 2. Pintar las "supercajas" principales para visualizar su comportamiento */
 header {
-    background-color: #e0f2fe; /* Azul clarito */
-    padding: 20px;
+    background-color: var(--color-header-bg);
+    padding: var(--espaciado-medio);
     background-image: url('imagenes/Sofa.jpg');
-    background-size:cover;
+    background-size: cover;
     background-position: center;
 }
 
 main {
-    background-color: #f1f5f9; /* Gris muy suave */
-    padding: 20px;
+    background-color: var(--color-main-bg);
+    padding: var(--espaciado-medio);
 }
 
 aside {
-    background-color: #fef3c7; /* Amarillo/crema clarito */
-    padding: 20px;
+    background-color: var(--color-aside-bg);
+    padding: var(--espaciado-medio);
 }
 
 footer {
-    background-color: #fee2e2; /* Rojo/rosado clarito */
-    padding: 20px;
+    background-color: var(--color-footer-bg);
+    padding: var(--espaciado-medio);
 }
 
 article {
     display: inline-block;
     width: 45%;         
     vertical-align: top;       
-    background-color: #ffffff; 
-    border: 1px solid #e2e8f0; 
-    border-radius: 8px;        
-    padding: 20px;            
-    margin: 10px;             
+    background-color: var(--color-blanco); 
+    border: 1px solid var(--color-borde); 
+    border-radius: 8px;         
+    padding: var(--espaciado-medio);            
+    margin: var(--espaciado-pequeno);            
 }

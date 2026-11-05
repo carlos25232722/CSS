@@ -43,3 +43,16 @@ El proyecto se estructuró y respaldó local y remotamente siguiendo buenas prá
 
 3. **Efecto en los elementos hermanos al aplicar un margen grande:**
    - Cuando se incrementa considerablemente el `margin` de un elemento, este ejerce mayor presión o separación sobre sus elementos contiguos, obligándolos a alejarse o, si el espacio horizontal del contenedor padre se agota, provocando que bajen de línea automáticamente.
+
+   ## Hallazgos: Centralización de Identidad Visual y Espaciado
+
+1. **Lista completa de variables declaradas:**
+   - **Colores:** `--color-primario` (#1d4ed8), `--color-secundario` (#047857), `--color-terciario` (#b91c1c), `--color-fondo` (#faf8f5), `--color-texto` (#333333), `--color-filtrar-categoria` (#fef3c7), `--color-footer` (#fee2e2), `--color-blanco` (#ffffff), y `--color-borde` (#e2e8f0).
+   - **Tipografía:** `--fuente-principal` ('Inter', sans-serif).
+   - **Espaciados:** `--espaciado-pequeno` (10px), `--espaciado-medio` (20px), y `--espaciado-grande` (25px).
+
+2. **Ventaja de reutilizar medidas de margen y relleno:**
+   Permite mantener una proporción visual estricta y armónica ("consistencia de aire") en todos los componentes. Si se requiere ajustar el espaciado general de las tarjetas o secciones, basta con modificar un único valor en la central de mando `:root` en lugar de buscar y cambiar múltiples selectores manualmente.
+
+3. **Prevención de colisiones visuales:**
+   La centralización en `:root` evita la duplicación de código (deuda técnica) y asegura que, a medida que la hoja de estilos crezca con nuevos elementos, todos hereden las mismas reglas de diseño base. Esto elimina el riesgo de desajustes visuales o valores arbitrarios dispersos por todo el código CSS.
