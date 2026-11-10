@@ -68,3 +68,14 @@ El proyecto se estructuró y respaldó local y remotamente siguiendo buenas prá
 
 3. **Inyección decorativa desde CSS vs. HTML:**
    - Inyectar detalles visuales con `::before` o `::after` desde la hoja de estilos evita la acumulación de etiquetas HTML vacías o innecesarias. Esto mantiene el código semántico, limpio, mantenible y enfocado únicamente en la estructura del contenido.
+
+   ## Hallazgos: Arquitectura BEM y Modularidad
+
+1. **¿Qué significa la sigla BEM y cómo se escribe visualmente?**
+   BEM responde a **Block, Element, Modifier** (Bloque, Elemento y Modificador). Se escribe utilizando una convención de nombres estricta basada en guiones: `.bloque__elemento--modificador` (dos guiones bajos para separar el elemento del bloque, y dos guiones medios para separar el modificador).
+
+2. **¿Por qué dividir el CSS en varios archivos facilita el trabajo colaborativo?**
+   Permite que varios desarrolladores trabajen de forma concurrente en componentes específicos (`tarjeta.css`, `botones.css`) sin colisionar en un único archivo maestro gigante, facilitando las revisiones y la fusión de cambios en Git.
+
+3. **¿Cómo esta metodología evita la guerra de especificidad (Cascada) al mantener un peso plano?**
+   Al prescindir de selectores anidados complejos, todas las clases BEM se estructuran en un nivel plano con un peso de especificidad constante (una sola clase de valor 10), impidiendo que unas reglas sobrescriban a otras por accidente.

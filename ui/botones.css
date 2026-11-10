@@ -1,0 +1,27 @@
+.btn {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: var(--espaciado-pequeno);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn--secundario {
+    background-color: var(--color-secundario);
+}
+
+.btn--secundario:hover {
+    background-color: #065f46;
+}
