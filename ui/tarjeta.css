@@ -1,8 +1,8 @@
 .card {
     position: relative;
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: var(--color-blanco);
     border: 1px solid var(--color-borde);
     border-radius: 8px;
@@ -24,9 +24,16 @@
     margin-bottom: 8px;
 }
 
-.card__description {
+.card__description,
+.card__body {
     font-size: 0.95rem;
     color: var(--color-texto);
     margin-bottom: 12px;
+    flex-grow: 1; /* Actúa como resorte invisible para empujar el precio/botón al fondo */
 }
 
+.card__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

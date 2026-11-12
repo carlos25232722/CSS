@@ -79,3 +79,14 @@ El proyecto se estructuró y respaldó local y remotamente siguiendo buenas prá
 
 3. **¿Cómo esta metodología evita la guerra de especificidad (Cascada) al mantener un peso plano?**
    Al prescindir de selectores anidados complejos, todas las clases BEM se estructuran en un nivel plano con un peso de especificidad constante (una sola clase de valor 10), impidiendo que unas reglas sobrescriban a otras por accidente.
+
+   ## Hallazgos: Arquitectura Total con Flexbox
+
+1. **Control del pie de página (`min-height: 100vh` y `flex-direction: column`):** 
+   Se aplicaron estas propiedades al contenedor global para forzar que la página ocupe siempre toda la altura de la pantalla, logrando que el pie de página se mantenga anclado abajo de forma automática.
+
+2. **Uso de la propiedad `gap` en la navegación:** 
+   Permitió eliminar el uso repetitivo de márgenes laterales en los elementos de las listas, garantizando una separación uniforme y controlada mediante variables.
+
+3. **Resistencia de la tarjeta de producto:** 
+   La combinación de Flexbox (`flex-direction: column` y `flex-grow: 1` en la descripción) permitió que las tarjetas mantengan una altura simétrica y que el botón de compra siempre quede alineado de manera uniforme en la parte inferior, sin importar la longitud del texto.

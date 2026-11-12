@@ -43,6 +43,19 @@ header {
     background-image: url('imagenes/Sofa.jpg');
     background-size: cover;
     background-position: center;
+    
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    gap: var(--espaciado-medio);
 }
 
 main {
@@ -60,7 +73,8 @@ footer {
     padding: var(--espaciado-medio);
 }
 
-.app-layout {
+.app-layout 
+{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
