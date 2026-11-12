@@ -2,7 +2,7 @@
 
 /* Importación de módulos CSS independientes */
 @import url('ui/botones.css');
-@import url('ui/menu-lateral.css');
+@import url('ui/menu lateral.css');
 @import url('ui/tarjeta.css');
 
 :root {
@@ -58,4 +58,15 @@ aside {
 footer {
     background-color: var(--color-footer-bg);
     padding: var(--espaciado-medio);
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  display: flex;
+  flex: 1;
 }
