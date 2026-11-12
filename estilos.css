@@ -33,7 +33,7 @@ body {
     color: var(--color-texto);
     line-height: 1.6;
     margin: 0;
-    padding: var(--espaciado-medio);
+    /* padding: var(--espaciado-medio); */
     background-color: var(--color-fondo);
 }
 
@@ -45,7 +45,6 @@ header {
     background-position: center;
     
 }
-
 
 .header {
     display: flex;
@@ -63,6 +62,18 @@ main {
     padding: var(--espaciado-medio);
 }
 
+.content {
+    flex: 1;                 /* absorbe todo el ancho junto al aside */
+    display: flex;
+    flex-wrap: wrap;         /* si no caben, pasan a la siguiente fila */
+    align-items: stretch;    /* todas las tarjetas miden lo mismo de alto */
+    gap: var(--espaciado-pequeno);
+}
+
+.content h2 {
+    flex: 0 0 100%;          /* el título ocupa toda la primera fila */
+}
+
 aside {
     background-color: var(--color-aside-bg);
     padding: var(--espaciado-medio);
@@ -71,6 +82,16 @@ aside {
 footer {
     background-color: var(--color-footer-bg);
     padding: var(--espaciado-medio);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__social {
+    display: flex;
+    gap: var(--espaciado-medio);
 }
 
 .app-layout 
@@ -84,3 +105,5 @@ footer {
   display: flex;
   flex: 1;
 }
+
+
